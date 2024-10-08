@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Churn Prediction Results</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f8f9fa; text-align: center; padding: 50px; }
+        table { margin: 0 auto; border-collapse: collapse; width: 80%; }
+        table, th, td { border: 1px solid black; padding: 10px; }
+        th { background-color: #007bff; color: white; }
+        td { text-align: center; }
+        button { padding: 10px 20px; background-color: #007bff; color: white; border: none; cursor: pointer; margin-top: 20px; }
+        button:hover { background-color: #0056b3; }
+    </style>
+</head>
+<body>
+<h1>Top 10 At-Risk Customers</h1>
+{{ tables | safe }}
+<a href="/download/{{ result_file }}"><button>Download Results</button></a>
+</body>
+</html>
