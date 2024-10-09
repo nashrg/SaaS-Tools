@@ -24,7 +24,7 @@ df.fillna(method='ffill', inplace=True)
 # Encoding categorical variables (if applicable)
 # Example: df = pd.get_dummies(df, drop_first=True)
 
-# Feature selection (drop unnecessary columns)
+#drop unnecessary columns
 X = df.drop(columns=['customer_id', 'churn'])
 y = df['churn']
 
