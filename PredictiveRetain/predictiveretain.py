@@ -78,6 +78,7 @@ plt.show()
 
 df['churn_risk'] = best_rf_model.predict_proba(scaler.transform(X))[:, 1]  # Predict churn probability
 
+
 # Show top 10 at-risk customers
 at_risk_customers = df[['customer_id', 'churn_risk']].sort_values(by='churn_risk', ascending=False).head(10)
 print('Top 10 At-Risk Customers:')
